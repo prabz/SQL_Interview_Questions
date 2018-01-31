@@ -1,0 +1,33 @@
+1. What is the output of below query?
+SELECT COUNT(*) FROM Table-A a INNER JOIN Table-B b
+ON (a.key1 = b.key1);
+
+Table-A
+key1 value
+1    10
+1    10
+1    10
+1    10
+
+Table-B
+key1 value
+1    10
+1    10
+1    10
+1    10
+
+ANSWER: 16 - Any join
+---------
+2. Write a query to sum the amount based on dept, and result should be in one line.
+
+Table-A:
+EMP_ID SALARY DEPT
+1       100   AA
+2       200   AA
+4       300   AA
+5       100   NN
+6       100   NN
+
+ANSWER: SELECT SUM(CASE WHEN DEPT='AA' THEN SALARY ELSE 0),SUM(CASE WHEN DEPT='NN' THEN SALARY ELSE 0) FROM Table-A;
+--------
+
